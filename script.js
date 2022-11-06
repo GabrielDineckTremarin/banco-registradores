@@ -74,8 +74,16 @@ calcBtn.addEventListener('click', ()=>{
 
     if(v1 == '' || v2 == '') {
 
-        tapSound.play()
-        msgRegistrador()
+        if(v1 == '' && v2 != '' || v2 == '' && v1 != '') {
+            msgError('Você não colocou um valor em uma das entradas')
+
+        } else if(v1 == '' && v2 == '' && isCheckbox1Checked == true && isCheckbox2Checked == true){
+            msgError('Você deixou as duas entradas em branco')
+        }else {
+            msgInitRegistradores()
+
+        }
+
     } else {
         mudarCorRow()
         clickSound.play()
@@ -93,7 +101,19 @@ function verificarValores(){
 
 }
 
-function msgRegistrador(){
+function msgError(message){
+    tapSound.play()
+    msg.style.display = 'block'
+    msg.innerHTML = message
+    setTimeout(()=>{
+        msg.style.display = 'none'    
+    },2000)
+
+}
+
+function msgInitRegistradores(){
+
+    tapSound.play()
     msg.style.display = 'block'
     msg.innerHTML = 'Um dos registradores não foi inicializado'
     setTimeout(()=>{
@@ -135,7 +155,13 @@ function calcular(){
         regs[regsIndex].innerHTML = v1*v2
 
     } else if(instructions.value == "/"){
-        regs[regsIndex].innerHTML = (v1/v2).toFixed(1)
+
+        if(v2 == 0){
+            msgError("Impossível dividir por zero")
+        } else {
+            regs[regsIndex].innerHTML = (v1/v2).toFixed(1)
+        }
+
     }
 
 }
