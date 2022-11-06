@@ -2,3 +2,4 @@
 
 [ ➡️ Visualizar ⬅️](https://gabrieldt02.github.io/banco-registradores/)
 
+.
