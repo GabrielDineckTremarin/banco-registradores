@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de registradores</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
+</head>
+
+<body class="bg-light">
+
+
+    <div id="container-xxl" class="container-md mt-5">
+
+        <div class="row">
+
+            <div id="instructions-container" class="col-sm-8">
+
+              <div class="row">
+                <h1 class="text-center mb-3">Banco de registradores</h1>
+              </div>
+
+                <form class="row" id="form">
+
+                    <div class="form-group col-lg-3 mt-3" >
+                      <label>Instrução</label>
+                      <select class="form-control" id="instructions">
+                        <option value="+">Add</option>
+                        <option value="-">Sub</option>
+                        <option value="*">Mul</option>
+                        <option value="/">Div</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group col-lg-3 mt-3" >
+                        <label >Destino</label>
+                        <select class="form-control" id="registradores-destino" >
+                            <option value="1">R1</option>
+                            <option value="2">R2</option>
+                            <option value="3">R3</option>
+                            <option value="4">R4</option>
+                            <option value="5">R5</option>
+                            <option value="6">R6</option>
+                            <option value="7">R7</option>
+                            <option value="8">R8</option>
+                            <option value="9">R9</option>
+                            <option value="10">R10</option>
+                            <option value="11">R11</option>
+                            <option value="12">R12</option>
+                            <option value="13">R13</option>
+                            <option value="14">R14</option>
+                            <option value="15">R15</option>
+                            <option value="16">R16</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-lg-3 mt-3" >
+                        <label> Registrador 1</label>
+                        <input type="number" class="form-control" id="hide-input-reg1">
+                        <select class="form-control" id="hide-select-reg1" >
+                          <option value="1">R1</option>
+                          <option value="2">R2</option>
+                          <option value="3">R3</option>
+                          <option value="4">R4</option>
+                          <option value="5">R5</option>
+                          <option value="6">R6</option>
+                          <option value="7">R7</option>
+                          <option value="8">R8</option>
+                          <option value="9">R9</option>
+                          <option value="10">R10</option>
+                          <option value="11">R11</option>
+                          <option value="12">R12</option>
+                          <option value="13">R13</option>
+                          <option value="14">R14</option>
+                          <option value="15">R15</option>
+                          <option value="16">R16</option>
+                        </select>
+                       
+                        <input class="form-check-input checkbox-reg1" type="checkbox" value="" id="flexCheckDefault">
+                        <label for="" class="form-check-label">Imediato</label>
+                      </div>
+
+                      <div class="form-group col-lg-3 mt-3" >
+                        <label >Registrador 2</label>
+                        <input type="number" class="form-control" id="hide-input-reg2">
+
+                        <select  id="hide-select-reg2" class="form-control hide " >
+                          <option value="1">R1</option>
+                          <option value="2">R2</option>
+                          <option value="3">R3</option>
+                          <option value="4">R4</option>
+                          <option value="5">R5</option>
+                          <option value="6">R6</option>
+                          <option value="7">R7</option>
+                          <option value="8">R8</option>
+                          <option value="9">R9</option>
+                          <option value="10">R10</option>
+                          <option value="11">R11</option>
+                          <option value="12">R12</option>
+                          <option value="13">R13</option>
+                          <option value="14">R14</option>
+                          <option value="15">R15</option>
+                          <option value="16">R16</option>
+                        </select>
+
+                        <input class="form-check-input checkbox-reg2" type="checkbox" value="" id="flexCheckDefault">
+                        <label for="" class="form-check-label ">Imediato</label>
+                      </div>
+                  </form>
+
+                  <div class="row mt-3 mb-3" id="buttons-container">
+                    <button class="btn-primary btn col-md-6 mt-3" id="calc-btn">Calcular</button>
+                    <button class="btn-primary btn col-md-6 mt-3" id="init-btn">Inicializar registradores</button>
+                  </div>
+
+
+    
+            </div>   
+
+
+
+
+
+
+
+
+            <div class="col-sm-4">
+                <table id="table" class="table table-sm table-striped table-bordered text-center">
+                    <thead>
+                      <tr >
+                        <th scope="col">Registradores</th>
+                        <th scope="col">Valores</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-body">
+                      <tr>
+                        <th scope="row">R1</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R2</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R3</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R4</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R5</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R6</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R7</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R8</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R9</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R10</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R11</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R12</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R13</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R14</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R15</th>
+                        <td class="registers"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R16</th>
+                        <td class="registers"></td>
+                      </tr>
+                
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+      
+
+    <div id="message" 
+    
+      <p class="bg-warning"></p>
+
+    </div>
+
+
+
+
+
+    <script src="bootstrap5/js/bootstrap.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

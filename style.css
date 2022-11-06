@@ -1,0 +1,61 @@
+
+
+
+#hide-input-reg1, 
+#hide-input-reg2 {
+    display: none;
+}
+
+#buttons-container button{
+    margin: auto;
+    width: 200px;
+}
+
+#message p{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 150px;
+    width: 70%;
+    font-size: 50px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    border-radius: 5px;
+}
+
+
+#calc-btn:active,
+#init-btn:active{
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+
+@media(max-width: 700px){
+    #buttons-container button{
+
+        width: 90%;
+    }
+
+    #message p {
+        font-size: 30px;
+    }
+
+
+
+}
+
+@media(max-width: 420px){
+
+    #message p {
+        font-size: 20px;
+    }
+
+}
+
+
